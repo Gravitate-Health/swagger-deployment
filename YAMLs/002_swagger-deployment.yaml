@@ -1,0 +1,45 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: swagger-ui
+  labels:
+    app: swagger-ui
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: swagger-ui
+  template:
+    metadata:
+      labels:
+        app: swagger-ui
+    spec:
+      containers:
+      - name: swagger-ui
+        image: swaggerapi/swagger-ui:v3.18.3
+        ports:
+        - containerPort: 8080
+        env:
+        - name: BASE_URL
+          value: /swagger-ui
+        - name: API_URLS
+          value: >-
+            [
+            {url:'/swagger-ui/openapis/dashboard-api-configmap.yaml',name:'Keycloack API'},
+            {url:'/swagger-ui/openapis/example-configmap.yaml',name:'Dashboard API 2'}
+            ]
+        volumeMounts:
+        - name: dashboard-swagger
+          mountPath: /usr/share/nginx/html/openapis
+        volumeMounts:
+        - name: dashboard-swagger2
+          mountPath: /usr/share/nginx/html/openapis
+      volumes:
+        - name: dashboard-swagger
+          configMap:
+            name: dashboard-swagger
+            items:
+              - key: swagger
+                path: dashboard-api-configmap.yaml
+              - key: swagger
+                path: example-configmap.yaml
