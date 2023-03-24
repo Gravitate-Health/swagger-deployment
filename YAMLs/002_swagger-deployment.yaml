@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: swagger-ui
-        image: swaggerapi/swagger-ui:v3.18.3
+        image: swaggerapi/swagger-ui:v3.14.1
         ports:
         - containerPort: 8080
         env:
@@ -25,21 +25,16 @@ spec:
         - name: API_URLS
           value: >-
             [
-            {url:'/swagger-ui/openapis/dashboard-api-configmap.yaml',name:'Keycloack API'},
-            {url:'/swagger-ui/openapis/example-configmap.yaml',name:'Dashboard API 2'}
+            {url:'/swagger-ui/openapis/kc-api-configmap.yaml',name:'Keycloack API'},
+            {url:'https://raw.githubusercontent.com/OAI/OpenAPI-Specification/master/examples/v3.0/petstore.yaml',name:'Example from github'}
             ]
         volumeMounts:
-        - name: dashboard-swagger
-          mountPath: /usr/share/nginx/html/openapis
-        volumeMounts:
-        - name: dashboard-swagger2
+        - name: kc-swagger
           mountPath: /usr/share/nginx/html/openapis
       volumes:
-        - name: dashboard-swagger
+        - name: kc-swagger
           configMap:
-            name: dashboard-swagger
+            name: kc-swagger
             items:
               - key: swagger
-                path: dashboard-api-configmap.yaml
-              - key: swagger
-                path: example-configmap.yaml
+                path: kc-api-configmap.yaml

@@ -10,7 +10,7 @@ spec:
   http:
   - match:
     - uri:
-        prefix: /swagger-ui
+        prefix: /swagger-fosps
     route:
     - destination:
         host: swagger-ui.default.svc.cluster.local
