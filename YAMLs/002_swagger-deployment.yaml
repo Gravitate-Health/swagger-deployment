@@ -21,12 +21,11 @@ spec:
         - containerPort: 8080
         env:
         - name: BASE_URL
-          value: /swagger-ui
+          value: /swagger-fosps
         - name: API_URLS
           value: >-
             [
-            {url:'/swagger-ui/openapis/kc-api-configmap.yaml',name:'Keycloack API'},
-            {url:'https://raw.githubusercontent.com/OAI/OpenAPI-Specification/master/examples/v3.0/petstore.yaml',name:'Example from github'}
+            {url:'/swagger-fosps/openapis/kc-api-configmap.yaml',name:'Keycloack API'}
             ]
         volumeMounts:
         - name: kc-swagger

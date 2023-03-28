@@ -15,4 +15,4 @@ spec:
     - destination:
         host: swagger-ui.default.svc.cluster.local
         port:
-          number: 3000
+          number: 8080
