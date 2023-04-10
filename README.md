@@ -20,7 +20,7 @@ Table of contents
 Introduction
 ------------
 
-Swagger deploymnet for the project API documnetation.
+Swagger deploymnet for the project API documentation.
 
 Installation
 ------------
@@ -31,7 +31,7 @@ kubectl and access to a kubernetes cluster is required.
 
 ### Kubernetes deployment
 
-For the Kubernetes deployment first of all, the istio setup must be running
+For the Kubernetes deployment first of all, the Istio setup must be running
 
 ```bash
 git clone <link-to-repo>
@@ -43,13 +43,13 @@ To set up the swagger with the keycloak api we need to apply the configmap
 kubectl apply -f YAMLs/001_keycloak-api-configmap.yaml
 ```
 
-Then apply the swagger deployment with the nuimber of replicas needed
+Then apply the swagger deployment with the number of replicas needed
 
 ```bash
 kubectl apply -f YAMLs/002_swagger-deployment.yaml
 ```
 
-To set up the service and the virtual service for Istio
+To set up the service and the virtual service for Istio run
 
 ```bash
 kubectl apply -f YAMLs/003_swagger-service.yaml
@@ -58,7 +58,7 @@ kubectl apply -f YAMLs/004_swagger-vs.yaml
 
 ### Adding new swagger pages
 
-In order to add or modify new swagger pages the [YAMLs/002_swagger-deployment.yaml]() must be modify in the following section
+In order to add or modify new swagger pages the [YAMLs/002_swagger-deployment.yaml](https://github.com/Gravitate-Health/swagger-deployment/blob/main/YAMLs/002_swagger-deployment.yaml#L28) must be modify in the following section
 
 ```yaml
 ...
