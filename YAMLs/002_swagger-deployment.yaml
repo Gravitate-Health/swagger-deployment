@@ -26,7 +26,9 @@ spec:
           value: >-
             [
             {url:'https://raw.githubusercontent.com/Gravitate-Health/keycloak/main/openapi.yaml',name:'Keycloack API'},
-            {url:'https://raw.githubusercontent.com/Gravitate-Health/focusing-manager/main/openapi.yaml',name:'Focusing Manager'}
+            {url:'https://raw.githubusercontent.com/Gravitate-Health/focusing-manager/main/openapi.yaml',name:'Focusing Manager'},
+            {url:'https://raw.githubusercontent.com/Gravitate-Health/focusing-service-test/master/openapi.yaml',name:'Lens Selector Service'},
+            {url:'https://raw.githubusercontent.com/Gravitate-Health/preprocessing-service-test/main/openapi.yaml',name:'Preprocessor Service'}
             ]
         volumeMounts:
         - name: kc-swagger
