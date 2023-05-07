@@ -29,6 +29,7 @@ spec:
             {url:'https://raw.githubusercontent.com/Gravitate-Health/focusing-manager/main/openapi.yaml',name:'Focusing Manager'},
             {url:'https://raw.githubusercontent.com/Gravitate-Health/focusing-service-test/master/openapi.yaml',name:'Lens Selector Service'},
             {url:'https://raw.githubusercontent.com/Gravitate-Health/preprocessing-service-test/main/openapi.yaml',name:'Preprocessor Service'}
+            {url:'https://raw.githubusercontent.com/Gravitate-Health/terminology-service/main/openapi.yaml',name:'Terminology Service'}
             ]
         volumeMounts:
         - name: kc-swagger
