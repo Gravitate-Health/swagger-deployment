@@ -6,7 +6,7 @@ metadata:
     name: kc-swagger
 data:
   swagger: |
-    openapi: 3.0.1
+    openapi: 3.1.0
     info:
       title: Gravitate Health Keycloak API Interface
       version: MVP2
