@@ -30,7 +30,8 @@ spec:
             {url:'https://raw.githubusercontent.com/Gravitate-Health/focusing-service-test/master/openapi.yaml',name:'Lens Selector Service'},
             {url:'https://raw.githubusercontent.com/Gravitate-Health/preprocessing-service-test/main/openapi.yaml',name:'Preprocessor Service'},
             {url:'https://raw.githubusercontent.com/Gravitate-Health/terminology-service/main/openapi.yaml',name:'Terminology Service'},
-            {url:'https://raw.githubusercontent.com/Gravitate-Health/summary-lens-service/main/openapi.yml',name:'AI Services'}
+            {url:'https://raw.githubusercontent.com/Gravitate-Health/summary-lens-service/main/openapi.yml',name:'AI Services'},
+            {url:'https://raw.githubusercontent.com/Gravitate-Health/fhir-connector/13-design-and-define-api-rest-interface-for-the-fosps-connectors/openapi.yaml', name: 'FHIR Connector'}
             ]
         volumeMounts:
         - name: kc-swagger
