@@ -32,7 +32,7 @@ spec:
             {url:'https://raw.githubusercontent.com/Gravitate-Health/terminology-service/main/openapi.yaml',name:'Terminology Service'},
             {url:'https://raw.githubusercontent.com/Gravitate-Health/summary-lens-service/main/openapi.yml',name:'AI Services'},
             {url:'https://raw.githubusercontent.com/Gravitate-Health/fhir-connector/13-design-and-define-api-rest-interface-for-the-fosps-connectors/openapi.yaml', name: 'FHIR Connector'},
-            {url: 'https://raw.githubusercontent.com/Gravitate-Health/supporting-material-manager/main/openapi.yaml'
+            {url: 'https://raw.githubusercontent.com/Gravitate-Health/supporting-material-manager/main/openapi.yaml', , name: 'SMM Service'}
             ]
         volumeMounts:
         - name: kc-swagger
