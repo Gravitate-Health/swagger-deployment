@@ -31,7 +31,8 @@ spec:
             {url:'https://raw.githubusercontent.com/Gravitate-Health/preprocessing-service-test/main/openapi.yaml',name:'Preprocessor Service'},
             {url:'https://raw.githubusercontent.com/Gravitate-Health/terminology-service/main/openapi.yaml',name:'Terminology Service'},
             {url:'https://raw.githubusercontent.com/Gravitate-Health/summary-lens-service/main/openapi.yml',name:'AI Services'},
-            {url:'https://raw.githubusercontent.com/Gravitate-Health/fhir-connector/main/openapi.yaml', name: 'FHIR Connector'}
+            {url:'https://raw.githubusercontent.com/Gravitate-Health/fhir-connector/main/openapi.yaml', name: 'FHIR Connector'},
+            {url: 'https://raw.githubusercontent.com/Gravitate-Health/supporting-material-manager/main/openapi.yaml', name: 'SMM Service'}
             ]
         volumeMounts:
         - name: kc-swagger
