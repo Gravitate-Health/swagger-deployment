@@ -16,6 +16,7 @@ spec:
     spec:
       containers:
       - name: swagger-ui
+        resources: {}
         image: swaggerapi/swagger-ui:v5.1.0
         ports:
         - containerPort: 8080
@@ -25,14 +26,15 @@ spec:
         - name: API_URLS
           value: >-
             [
-            {url:'https://raw.githubusercontent.com/Gravitate-Health/keycloak/main/openapi.yaml',name:'Keycloack API'},
-            {url:'https://raw.githubusercontent.com/Gravitate-Health/focusing-manager/main/openapi.yaml',name:'Focusing Manager'},
-            {url:'https://raw.githubusercontent.com/Gravitate-Health/focusing-service-test/master/openapi.yaml',name:'Lens Selector Service'},
-            {url:'https://raw.githubusercontent.com/Gravitate-Health/preprocessing-service-test/main/openapi.yaml',name:'Preprocessor Service'},
-            {url:'https://raw.githubusercontent.com/Gravitate-Health/terminology-service/main/openapi.yaml',name:'Terminology Service'},
-            {url:'https://raw.githubusercontent.com/Gravitate-Health/summary-lens-service/main/openapi.yml',name:'AI Services'},
-            {url:'https://raw.githubusercontent.com/Gravitate-Health/fhir-connector/main/openapi.yaml', name: 'FHIR Connector'},
+            {url: 'https://raw.githubusercontent.com/Gravitate-Health/keycloak/main/openapi.yaml',name:'Keycloack API'},
+            {url: 'https://raw.githubusercontent.com/Gravitate-Health/focusing-manager/main/openapi.yaml',name:'Focusing Manager'},
+            {url: 'https://raw.githubusercontent.com/Gravitate-Health/focusing-service-test/master/openapi.yaml',name:'Lens Selector Service'},
+            {url: 'https://raw.githubusercontent.com/Gravitate-Health/preprocessing-service-test/main/openapi.yaml',name:'Preprocessor Service'},
+            {url: 'https://raw.githubusercontent.com/Gravitate-Health/terminology-service/main/openapi.yaml',name:'Terminology Service'},
+            {url: 'https://raw.githubusercontent.com/Gravitate-Health/summary-lens-service/main/openapi.yml',name:'AI Services'},
+            {url: 'https://raw.githubusercontent.com/Gravitate-Health/fhir-connector/main/openapi.yaml', name: 'FHIR Connector'},
             {url: 'https://raw.githubusercontent.com/Gravitate-Health/supporting-material-manager/main/openapi.yaml', name: 'SMM Service'}
+            {url: 'https://raw.githubusercontent.com/Gravitate-Health/chatbot-interface/main/openapi.yaml', name: 'Chatbot Interface'}
             ]
         volumeMounts:
         - name: kc-swagger
